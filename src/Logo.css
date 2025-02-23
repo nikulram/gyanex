@@ -1,0 +1,53 @@
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/*Gyanex Logo */
+.logo-text {
+  font-size: 7rem;
+  color: #ff6600;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+/*Eyes */
+.eye-wrapper {
+  display: flex;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.eye {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  position: relative;
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+/* Eyes Squeeze Effect on Buttons */
+.eye.focus {
+  width: 20px; /* Make eyes smaller */
+  height: 18px;
+}
+
+/*Pupil */
+.pupil {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.2s ease-out;
+}

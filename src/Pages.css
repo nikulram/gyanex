@@ -1,0 +1,340 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Remove Scrollbars */
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+}
+
+
+.home-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+/* Keep Only Home Button on Top */
+.navbar {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6600 !important;
+  background: none;
+  padding: 10px;
+  border: none;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #ff8800;
+  text-shadow: 0 0 10px #ff8800;
+}
+
+/* Home Page Buttons */
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.home-button {
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background: #ff6600;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  border: 2px solid #ff8800;
+}
+
+.home-button:hover {
+  background: #ff8800;
+  transform: scale(1.05);
+}
+
+
+.page-container {
+  width: auto;
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/*Upload Inputs */
+input[type="file"], input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  font-size: 16px;
+}
+
+
+#convert-textarea {
+  width: 80%;
+  height: 200px;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ff6600;
+  background: black;
+  color: white;
+  text-align: left;
+  resize: none;
+  margin: auto;
+  display: block;
+}
+
+/*Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: #ff6600;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff8800;
+  color: black;
+}
+
+/*Loading & Errors */
+.loading-text {
+  color: #ff4500;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.error-text {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/*Flashcards */
+.flashcards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/*Flashcard Structure */
+.flashcard {
+  width: 250px;
+  height: 170px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Flashcard Expanded State */
+.flashcard.expanded {
+  width: 400px;
+  height: 300px;
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+/* Close Button for Expanded Flashcard */
+.flashcard-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 18px;
+  color: #ff6600;
+  cursor: pointer;
+  font-weight: bold;
+  display: none;
+}
+
+.flashcard.expanded .flashcard-close {
+  display: block;
+}
+
+/*Flashcard Inner Flip Animation */
+.flashcard-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+/*Flashcard Front & Back */
+.flashcard-front,
+.flashcard-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 16px;
+}
+
+.flashcard-front {
+  background: #ff6600;
+  color: black;
+}
+
+.flashcard-back {
+  background: black;
+  color: #ff6600;
+  transform: rotateY(180deg);
+}
+
+/* Pagination */
+.pagination {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Updated Prev/Next Button */
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  background: black;
+  color: #ff6600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  color: white;
+}
+
+/* Show Correct Flashcard Page Number */
+.pagination span {
+  font-size: 16px;
+  color: #ff8800;
+}
+
+/* Website Topics */
+.website-topics {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff6600;
+  background: rgba(255, 102, 0, 0.1);
+}
+
+/*Website Topics Styling */
+.website-topics ul {
+  list-style: none;
+  padding: 0;
+}
+
+.website-topics li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ff6600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.website-topics li:hover {
+  background: rgba(255, 136, 0, 0.3);
+}
+
+/* "Search on Google" */
+.search-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  background: #ff6600;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #ff8800;
+}
+
+/* Mobile Compatibility */
+@media (max-width: 768px) {
+  .home-fullscreen {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .home-buttons {
+    width: 100%;
+  }
+
+  .home-button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .flashcard {
+    width: 200px;
+    height: 150px;
+  }
+
+  .pagination {
+    bottom: 10px;
+  }
+
+  .website-topics {
+    max-height: 300px;
+  }
+}

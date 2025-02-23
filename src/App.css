@@ -1,0 +1,44 @@
+/* General Styling */
+body {
+  background: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: #1e1e1e;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Only One Page is Visible at a Time */
+.page-container {
+  display: block;
+}
