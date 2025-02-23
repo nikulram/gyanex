@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/gyanex/static/css/main.09a22aba.css",
+    "main.js": "/gyanex/static/js/main.aa1d031b.js",
+    "static/js/239.ec08534d.chunk.js": "/gyanex/static/js/239.ec08534d.chunk.js",
+    "static/js/977.9acc2beb.chunk.js": "/gyanex/static/js/977.9acc2beb.chunk.js",
+    "static/js/732.7323df31.chunk.js": "/gyanex/static/js/732.7323df31.chunk.js",
+    "index.html": "/gyanex/index.html",
+    "main.09a22aba.css.map": "/gyanex/static/css/main.09a22aba.css.map",
+    "main.aa1d031b.js.map": "/gyanex/static/js/main.aa1d031b.js.map",
+    "239.ec08534d.chunk.js.map": "/gyanex/static/js/239.ec08534d.chunk.js.map",
+    "732.7323df31.chunk.js.map": "/gyanex/static/js/732.7323df31.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09a22aba.css",
+    "static/js/main.aa1d031b.js"
+  ]
+}
