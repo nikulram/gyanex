@@ -22,3 +22,6 @@ Gyanex **extracts topics & content** from PDFs & websites, auto-generates **flas
 
 ## License  
 This project has a [LICENSE](LICENSE).Check it out. 
+
+**Live Demo:** [Gyanex App](https://nikulram.github.io/gyanex)  
+**GitHub Repo:** [nikulram/gyanex](https://github.com/nikulram/gyanex)
